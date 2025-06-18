@@ -79,9 +79,11 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 button:hover {
     background-color: #7a3f9c; 
+    transform: scale(1.1);
 }
 .sword {
     display: flex;
@@ -117,4 +119,48 @@ li {
 }
 .enchants img:hover{
     transform: scale(1.1);
+}
+.enchants_item {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    margin-top: px;
+}
+details {
+    background-color: #222222;
+    padding: 10px;
+    margin-left: 60px;
+    margin-right: 80px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+.content {
+    font-size: 16px;
+}
+details .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+details[open] .content {
+  max-height: 500px; 
+}
+details:hover {
+    transform: scale(1.05);
+    background-color: #2b2b2b;
+    border: white 1px solid;
+}
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #c785e9;
+    margin-bottom: 10px;
+
+
 }
